@@ -1,33 +1,113 @@
-## Fraction Calculator
+# 🧮 Fraction Calculator
 
-This is a command-line program that performs operations on fractions and provides the result in fractional form. The program supports the following legal operators: `*` (multiply), `/` (divide), `+` (add), and `-` (subtract).
+A lightweight **Java CLI tool** that performs arithmetic operations with **fractions and mixed numbers**, returning simplified results in fractional or mixed form.  
+Supports all basic operations: ➕ addition, ➖ subtraction, ✖️ multiplication, and ➗ division.
 
-### Usage
+---
 
-To use the Fraction Calculator, follow these steps:
+## 🚀 Features
 
-1. Run the program in your terminal or command prompt.
-2. Enter a valid fraction operation using the supported operators and operands.
-3. Make sure to separate operands and operators by one or more spaces.
-4. Mixed numbers should be represented as `whole_numerator/denominator`, e.g., "3_1/4".
-5. The program will process the input and display the result in fractional form.
+- Supports **whole numbers**, **fractions**, and **mixed fractions** (`3_1/4`)
+- Handles **addition (+)**, **subtraction (-)**, **multiplication (*)**, and **division (/)**  
+- Returns results in the **most readable fractional format**
+- Detects and reports **invalid inputs** (format errors, invalid operands, unknown operators)
 
-### Supported Operations
+---
 
-The Fraction Calculator allows you to perform operations on fractions, improper fractions, and whole numbers using the supported operators.
+## 🧩 Example Usage
 
-Examples of valid operations:
+### ▶️ Run the Program
 
-- `3/4 + 1/2`
-- `5/8 - 1/4`
-- `2/3 * 3/5`
-- `1/2 / 3/4`
-- `2_3/4 + 1/4`
-- `5 * 2/3`
+Compile and execute in your terminal:
 
-### Notes
+```bash
+javac FractionCalculator.java
+java FractionCalculator
+```
 
-- The program will display appropriate error messages for invalid inputs, such as incorrect operation format, unknown operators, badly formed fractions, and invalid operands.
-- Make sure to enter the input in the correct format as described above to get accurate results.
+### 💡 Input Format
 
-Feel free to use this Fraction Calculator to perform arithmetic with fractions easily and efficiently!
+Enter your operation in one line:
+
+```
+[operand1] [operator] [operand2]
+```
+
+- Each element separated by a **space**
+- Mixed numbers use `_` between the whole number and the fraction  
+  _(e.g. `2_3/4` means 2 and three-fourths)_
+
+---
+
+## 🧠 Examples
+
+| Operation | Output |
+|------------|---------|
+| `3/4 + 1/2` | `1_1/4` |
+| `5/8 - 1/4` | `3/8` |
+| `2/3 * 3/5` | `2/5` |
+| `1/2 / 3/4` | `2/3` |
+| `2_3/4 + 1/4` | `3` |
+| `5 * 2/3` | `3_1/3` |
+
+---
+
+## ⚠️ Error Handling
+
+The calculator provides helpful feedback for:
+
+- ❌ Incorrect input format (missing spaces or operators)
+- ⚠️ Invalid fractions (e.g. `2_/3`, `4/0`)
+- 🧮 Unknown operators (e.g. `%`, `^`)
+- 🚫 Non-numeric input
+
+Example:
+```
+Enter a fraction operation:
+3/4 ^ 1/2
+Invalid operator
+```
+
+---
+
+## 🧱 Code Overview
+
+The program is composed of two main classes:
+
+- **`FractionCalculator`** – Handles user input, parsing, and operator dispatch.
+- **`Fraction`** – Encapsulates fraction logic (addition, subtraction, multiplication, division) and formatting.
+
+Fractions are automatically simplified and presented in mixed form when appropriate.
+
+---
+
+## 🧪 Example Session
+
+```bash
+$ java FractionCalculator
+Enter a fraction operation:
+2_3/4 + 1/4
+Result: 3
+```
+
+---
+
+## 🧰 Tech Stack
+
+- **Language:** Java 17+
+- **Interface:** CLI (command-line)
+- **Dependencies:** None (pure Java)
+
+---
+
+## 🧾 License
+
+This project is released under the [MIT License](LICENSE).  
+Feel free to modify and extend it for educational or practical use.
+
+---
+
+### ✨ Author
+**Fernando Campos**  
+📍 QA Automation Engineer & SDET  
+🔗 [github.com/refnando](https://github.com/refnando)
